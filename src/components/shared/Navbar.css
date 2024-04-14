@@ -1,0 +1,13 @@
+.navbar-center li :hover{
+   color: white;
+   background-color: #FF0000;
+   
+}
+.navbar-center li ::after {
+   color: white;
+   background-color: #FF0000;
+}
+.navbar-center li {
+   background-color: rgb(241, 237, 237);
+   border-radius: 10px;
+}
