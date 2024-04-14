@@ -61,19 +61,21 @@ const Navbar = () => {
 
                     {
                         user ?
-                            <div className="flex items-center">
-                                <span>{user.email} </span>
-                                <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                                    <div className="w-10 rounded-full">
-                                        <img alt="Tailwind CSS Navbar component" src={userProfile} />
+                            <Link to="/home">
+                                <div className="flex items-center">
+                                    <span>{user.email} </span>
+                                    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                                        <div className="w-10 rounded-full">
+                                            <img alt="Tailwind CSS Navbar component" src={userProfile} />
+                                        </div>
                                     </div>
+                                    <button onClick={handleSignOut} className="login-button p-1 rounded-md text-white font-semibold bg-black text-sm hover:bg-red-500 hover:rounded-md">Sign Out</button>
                                 </div>
-                                <button onClick={handleSignOut} className="login-button p-1 rounded-md text-white font-bold bg-black text-xl hover:bg-red-500 hover:rounded-md">Sign Out</button>
-                            </div>
+                            </Link>
                             :
                             <Link to="/login">
 
-                                <button className="login-button p-1 rounded-md text-white font-bold bg-black text-xl hover:bg-red-500 hover:rounded-md">Login</button>
+                                <button className="login-button p-1 rounded-md text-white font-semibold bg-black text-sm hover:bg-red-500 hover:rounded-md">Login</button>
                             </Link>
                     }
 
