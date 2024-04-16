@@ -4,6 +4,7 @@ import { AuthContext } from "../../providers/AuthProvider";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { updateProfile } from "firebase/auth";
 
 
 const Register = () => {
@@ -47,6 +48,15 @@ const Register = () => {
             .then(result => {
                 console.log(result.user)
                 toast.success('User Created Successfully !')
+
+                // update profile
+                updateProfile(result.user, {
+                    displayName: name,
+                    photoURL: "https://example.com/jane-q-user/profile.jpg"
+                })
+                    .then(() => console.log('profile updated'))
+                    .catch()
+
             })
             .catch(error => {
                 console.error(error)

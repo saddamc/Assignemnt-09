@@ -17,7 +17,11 @@ const Navbar = () => {
 
     const navLinks = <>
         <li className="bg-rgb(255,81,70)"> <NavLink to="/">Home</NavLink> </li>
-        <li> <NavLink to="/profile">Update Profile</NavLink> </li>
+        {
+            user && <>
+                <li className="hide"> <NavLink to="/profile">Update Profile</NavLink> </li>
+            </>
+        }
         <li> <NavLink to="/about">About</NavLink> </li>
     </>
     return (
@@ -61,7 +65,7 @@ const Navbar = () => {
 
                     {
                         user ?
-                            <Link to="/home">
+                            <Link to="/">
                                 <div className="flex items-center">
                                     <span>{user.email} </span>
                                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
