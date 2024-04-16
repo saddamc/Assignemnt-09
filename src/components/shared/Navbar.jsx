@@ -25,8 +25,8 @@ const Navbar = () => {
         <li> <NavLink to="/about">About</NavLink> </li>
     </>
     return (
-        <div className="navbar font-fira">
-            <div className="navbar bg-base-100">
+        <div className="navbar font-fira max-w-7xl mx-auto bg-slate-400 table-fixed z-20">
+            <div className="navbar ">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -73,13 +73,13 @@ const Navbar = () => {
                                             <img alt="Tailwind CSS Navbar component" src={userProfile} />
                                         </div>
                                     </div>
-                                    <button onClick={handleSignOut} className="login-button p-1 rounded-md text-white font-semibold bg-black text-sm hover:bg-red-500 hover:rounded-md">Sign Out</button>
+                                    <button onClick={handleSignOut} className="login-button p-2 rounded-md text-white font-semibold bg-black text-sm hover:bg-red-500 hover:rounded-md">Sign Out</button>
                                 </div>
                             </Link>
                             :
                             <Link to="/login">
 
-                                <button className="login-button p-1 rounded-md text-white font-semibold bg-black text-sm hover:bg-red-500 hover:rounded-md">Login</button>
+                                <button className="login-button p-2 rounded-md text-white font-semibold bg-black text-sm hover:bg-red-500 hover:rounded-md">Login</button>
                             </Link>
                     }
 

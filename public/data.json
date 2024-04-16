@@ -1,0 +1,110 @@
+[
+  {
+    "image1": "https://i.ibb.co/44kLwg0/1.jpg",
+    "estate_title": "Cozy Family Home in Suburbia",
+    "id": "1",
+    "segment_name": "Single-family homes",
+    "description": "Beautiful single-family home with three bedrooms, two bathrooms, and a spacious backyard.",
+    "price": "$350,000",
+    "status": "sale",
+    "area": "1800 sq ft",
+    "location": "Suburban neighborhood, Cityville",
+    "facilities": ["spacious living room", "backyard garden", "attached garage"]
+  },
+  {
+    "image2": "https://i.ibb.co/xMDLgwr/2.jpg",
+    "estate_title": "Luxury Downtown Apartment",
+    "id": "2",
+    "segment_name": "Apartments",
+    "description": "Stunning two-bedroom apartment with modern amenities and breathtaking city views.",
+    "price": "$2,500/month",
+    "status": "rent",
+    "area": "1200 sq ft",
+    "location": "Downtown District, Metropolis",
+    "facilities": ["gym", "swimming pool", "rooftop terrace"]
+  },
+  {
+    "image3": "https://i.ibb.co/V92cMp4/3.jpg",
+    "estate_title": "Charming Townhouse in Historic District",
+    "id": "3",
+    "segment_name": "Townhouses",
+    "description": "Historic three-story townhouse with original architecture and contemporary interior design.",
+    "price": "$450,000",
+    "status": "sale",
+    "area": "2200 sq ft",
+    "location": "Historic District, Old Town",
+    "facilities": ["open-plan kitchen", "private patio", "garage"]
+  },
+  {
+    "image4": "https://i.ibb.co/jRw2rDp/4.jpg",
+    "estate_title": "Student Housing Near University Campus",
+    "id": "4",
+    "segment_name": "Student housing",
+    "description": "Modern student housing complex offering furnished apartments with shared amenities.",
+    "price": "$800/month (per room)",
+    "status": "rent",
+    "area": "600 sq ft (per room)",
+    "location": "University District, College Town",
+    "facilities": ["study lounge", "fitness center", "laundry facilities"]
+  },
+  {
+    "image5": "https://i.ibb.co/930cwL7/5.jpg",
+    "estate_title": "Senior Living Community with Care Services",
+    "id": "5",
+    "segment_name": "Senior living communities",
+    "description": "Resort-style senior living community providing independent and assisted living options.",
+    "price": "$3,000/month",
+    "status": "rent",
+    "area": "1500 sq ft",
+    "location": "Retirement Village, Sunny Valley",
+    "facilities": ["restaurant-style dining", "wellness center", "landscaped gardens"]
+  },
+  {
+    "image6": "https://i.ibb.co/0QJ7S9m/6.jpg",
+    "estate_title": "Scenic Vacation Rental by the Beach",
+    "id": "6",
+    "segment_name": "Vacation rentals",
+    "description": "Idyllic beachfront vacation home perfect for a family getaway or romantic retreat.",
+    "price": "$300/night",
+    "status": "rent",
+    "area": "1600 sq ft",
+    "location": "Beachfront, Paradise Cove",
+    "facilities": ["oceanfront balcony", "private beach access", "outdoor grill"]
+  },
+  {
+    "image7": "https://i.ibb.co/72PJBHH/7.jpg",
+    "estate_title": "Modern Loft Apartment in Artsy Neighborhood",
+    "id": "7",
+    "segment_name": "Apartments",
+    "description": "Contemporary loft-style apartment nestled in a vibrant and artistic community.",
+    "price": "$2,200/month",
+    "status": "rent",
+    "area": "1000 sq ft",
+    "location": "Art District, Creative City",
+    "facilities": ["exposed brick walls", "high ceilings", "community garden"]
+  },
+  {
+    "image8": "https://i.ibb.co/khyF8sQ/8.jpg",
+    "estate_title": "Spacious Family Villa with Panoramic Views",
+    "id": "8",
+    "segment_name": "Single-family homes",
+    "description": "Expansive villa featuring five bedrooms, a landscaped garden, and stunning mountain views.",
+    "price": "$1,200,000",
+    "status": "sale",
+    "area": "4000 sq ft",
+    "location": "Mountain Retreat, Serene Hills",
+    "facilities": ["home theater", "infinity pool", "guest house"]
+  },
+  {
+    "image9": "https://i.ibb.co/Khk64pg/9.jpg",
+    "estate_title": "Comfortable Retirement Apartment in Gated Community",
+    "id": "9",
+    "segment_name": "Senior living communities",
+    "description": "Relaxing retirement apartment situated in a secure gated community with tailored care services.",
+    "price": "$4,500/month",
+    "status": "rent",
+    "area": "1200 sq ft",
+    "location": "Gated Community, Tranquil Meadows",
+    "facilities": ["24/7 nursing care", "activity center", "landscaped courtyard"]
+  }
+]

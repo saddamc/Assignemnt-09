@@ -11,6 +11,10 @@
   },
   "dependencies": {
     "firebase": "^10.11.0",
+    "gatsby-image": "^3.11.0",
+    "gatsby-plugin-sharp": "^5.13.1",
+    "gatsby-source-filesystem": "^5.13.1",
+    "gatsby-transformer-sharp": "^5.13.1",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.4",
     "prop-types": "^15.8.1",

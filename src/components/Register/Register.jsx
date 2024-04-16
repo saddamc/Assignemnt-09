@@ -38,6 +38,9 @@ const Register = () => {
             toast.error('Must have an Lowercase letter in the password');
             return;
         }
+        else if (!/[0-9]/.test(password)) {
+            toast.error('Must use one Numeric Key in the password ')
+        }
 
 
         setRegisterError('');

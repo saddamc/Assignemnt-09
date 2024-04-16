@@ -1,9 +1,11 @@
+import HomesSlider from "../Banner/homeSlider/HomesSlider";
 
 
 const Home = () => {
     return (
         <div>
-            <h2 className="text-2xl">This is Home</h2>
+            <HomesSlider></HomesSlider>
+
         </div>
     );
 };
