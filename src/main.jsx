@@ -12,6 +12,8 @@ import Register from './components/Register/Register';
 import Profile from './components/shared/Profile/Profile';
 import AuthProvider from './providers/AuthProvider';
 import PrivateRoute from './routes/PrivateRoute';
+import DetailsHouse from './components/Estate/DetailsHouse/DetailsHouse';
+import Houses from './components/Estate/Houses/Houses';
 
 const router = createBrowserRouter([
   {
@@ -34,6 +36,15 @@ const router = createBrowserRouter([
         path: '/profile',
         element: <PrivateRoute><Profile></Profile></PrivateRoute>
       },
+      {
+        path: '/house',
+        element: <Houses></Houses>,
+      },
+      {
+        path: '/house/:id',
+        element: <PrivateRoute><DetailsHouse></DetailsHouse></PrivateRoute>,
+        loader: () => fetch('/House.json')
+      }
     ]
   },
 ]);

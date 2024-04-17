@@ -3,6 +3,7 @@ import 'swiper/css';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css/navigation';
 import { HiOutlineArrowLeft, HiOutlineArrowRight } from 'react-icons/hi';
+import { Link, NavLink } from 'react-router-dom';
 
 
 
@@ -69,7 +70,9 @@ const HomesSlider = () => {
                         <img src="https://i.ibb.co/Khk64pg/9.jpg" alt="" />
                     </div>
                     <div className='title-content absolute top-[85%] left-[3rem] '>
-                        <button className='btn px-[2rem] bg-[#333] border-none font-fira text-white text-lg font-bold'>View Details</button>
+                        <NavLink to="/house">
+                            <button className='btn px-[2rem] bg-[#333] border-none font-fira text-white text-lg font-bold'>View Details</button>
+                        </NavLink>
                     </div>
                 </SwiperSlide>
 

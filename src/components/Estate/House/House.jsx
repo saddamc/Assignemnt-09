@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 
 const House = ({ house }) => {
@@ -10,7 +12,9 @@ const House = ({ house }) => {
                     <h2 className="card-title">{segment_name}</h2>
                     <p>{estate_title}</p>
                     <div className="card-actions justify-start">
-                        <button className="btn-sm rounded-md text-white bg-black">View Details</button>
+                        <Link to={`/house/${id}`}>
+                            <button className="btn-sm px-2 rounded-md text-white bg-black hover:bg-red-500">View Details</button>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -20,3 +24,6 @@ const House = ({ house }) => {
 };
 
 export default House;
+House.propTypes = {
+    house: PropTypes.object
+}
