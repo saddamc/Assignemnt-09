@@ -1,20 +1,22 @@
 import { useContext, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 import { sendPasswordResetEmail } from "firebase/auth";
 import auth from "../../firebase/firebase.config";
 
 
 const Login = () => {
-    const { signIn } = useContext(AuthContext);
+    const { signIn, signInWithGoogle } = useContext(AuthContext);
 
     const [registerError, setRegisterError] = useState('');
     const [success, setSuccess] = useState('');
     const [showPassword, setShowPassword] = useState(false);
     // const emailRef = useRef(null);
+    const navigate = useNavigate();
 
     const handleLogin = e => {
         e.preventDefault();
@@ -32,10 +34,21 @@ const Login = () => {
             .then(result => {
                 console.log(result.user)
                 toast.success('Login Successfully !')
+                e.target.reset();
+                navigate(location?.state ? location.state : '/')
             })
             .catch(error => {
                 console.error(error);
                 toast.error(error.message);
+            })
+    }
+    const handleGoogleSignIn = () => {
+        signInWithGoogle()
+            .then(result => {
+                console.log(result.user)
+            })
+            .catch(error => {
+                console.error(error)
             })
     }
 
@@ -107,7 +120,8 @@ const Login = () => {
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">Login</button>
                         </div>
-                        <Link className="mx-auto mt-2 font-bold text-blue-600" to="/register"><p>Create New Account</p></Link>
+
+
                     </form>
                     {
                         registerError && <p className="text-red-700 mx-auto mb-2">{registerError}</p>
@@ -117,7 +131,19 @@ const Login = () => {
                     }
 
 
+
+
                 </div>
+                <div className="bg-slate-500 min-w-[255px] min-h-[65px] rounded-md mx-auto mb-4 space-y-2 justify-center text-center">
+                    <p className="text-sm font-bold items-center text-white">Login with</p>
+                    <div>
+                        <button onClick={handleGoogleSignIn} className="bg-yellow-700 px-2 py-1 font-semibold text-white rounded-md flex items-center">
+                            <FcGoogle></FcGoogle>
+                            <span className="ml-1">Google</span></button>
+                    </div>
+                </div>
+                <Link className="mx-auto font-bold shadow-md shadow-black text-white bg-black px-8 py-1 rounded-md" to="/register"><p>Create New Account</p></Link>
+
             </div>
             <ToastContainer />
         </div>

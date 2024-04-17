@@ -1,6 +1,6 @@
 [
   {
-    "image1": "https://i.ibb.co/44kLwg0/1.jpg",
+    "image": "https://i.ibb.co/44kLwg0/1.jpg",
     "estate_title": "Cozy Family Home in Suburbia",
     "id": "1",
     "segment_name": "Single-family homes",
@@ -12,7 +12,7 @@
     "facilities": ["spacious living room", "backyard garden", "attached garage"]
   },
   {
-    "image2": "https://i.ibb.co/xMDLgwr/2.jpg",
+    "image": "https://i.ibb.co/xMDLgwr/2.jpg",
     "estate_title": "Luxury Downtown Apartment",
     "id": "2",
     "segment_name": "Apartments",
@@ -24,7 +24,7 @@
     "facilities": ["gym", "swimming pool", "rooftop terrace"]
   },
   {
-    "image3": "https://i.ibb.co/V92cMp4/3.jpg",
+    "image": "https://i.ibb.co/V92cMp4/3.jpg",
     "estate_title": "Charming Townhouse in Historic District",
     "id": "3",
     "segment_name": "Townhouses",
@@ -36,7 +36,7 @@
     "facilities": ["open-plan kitchen", "private patio", "garage"]
   },
   {
-    "image4": "https://i.ibb.co/jRw2rDp/4.jpg",
+    "image": "https://i.ibb.co/jRw2rDp/4.jpg",
     "estate_title": "Student Housing Near University Campus",
     "id": "4",
     "segment_name": "Student housing",
@@ -48,7 +48,7 @@
     "facilities": ["study lounge", "fitness center", "laundry facilities"]
   },
   {
-    "image5": "https://i.ibb.co/930cwL7/5.jpg",
+    "image": "https://i.ibb.co/930cwL7/5.jpg",
     "estate_title": "Senior Living Community with Care Services",
     "id": "5",
     "segment_name": "Senior living communities",
@@ -60,7 +60,7 @@
     "facilities": ["restaurant-style dining", "wellness center", "landscaped gardens"]
   },
   {
-    "image6": "https://i.ibb.co/0QJ7S9m/6.jpg",
+    "image": "https://i.ibb.co/0QJ7S9m/6.jpg",
     "estate_title": "Scenic Vacation Rental by the Beach",
     "id": "6",
     "segment_name": "Vacation rentals",
@@ -72,7 +72,7 @@
     "facilities": ["oceanfront balcony", "private beach access", "outdoor grill"]
   },
   {
-    "image7": "https://i.ibb.co/72PJBHH/7.jpg",
+    "image": "https://i.ibb.co/72PJBHH/7.jpg",
     "estate_title": "Modern Loft Apartment in Artsy Neighborhood",
     "id": "7",
     "segment_name": "Apartments",
@@ -84,7 +84,7 @@
     "facilities": ["exposed brick walls", "high ceilings", "community garden"]
   },
   {
-    "image8": "https://i.ibb.co/khyF8sQ/8.jpg",
+    "image": "https://i.ibb.co/khyF8sQ/8.jpg",
     "estate_title": "Spacious Family Villa with Panoramic Views",
     "id": "8",
     "segment_name": "Single-family homes",
@@ -96,7 +96,7 @@
     "facilities": ["home theater", "infinity pool", "guest house"]
   },
   {
-    "image9": "https://i.ibb.co/Khk64pg/9.jpg",
+    "image": "https://i.ibb.co/Khk64pg/9.jpg",
     "estate_title": "Comfortable Retirement Apartment in Gated Community",
     "id": "9",
     "segment_name": "Senior living communities",

@@ -39,7 +39,8 @@ const Register = () => {
             return;
         }
         else if (!/[0-9]/.test(password)) {
-            toast.error('Must use one Numeric Key in the password ')
+            toast.error('Must use one Numeric Key in the password ');
+            return;
         }
 
 
