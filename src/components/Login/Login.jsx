@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { ToastContainer, toast } from 'react-toastify';
@@ -9,6 +9,9 @@ import { FaGithub } from "react-icons/fa6";
 
 
 const Login = () => {
+    useEffect(() => {
+        document.title = `RAINBOW | LOGIN`;
+    }, []);
     const { signIn, signInWithGoogle, githubLogin } = useContext(AuthContext);
 
     const [registerError, setRegisterError] = useState('');
@@ -34,7 +37,7 @@ const Login = () => {
         signIn(email, password)
             .then(result => {
                 console.log(result.user)
-                toast.success('Login Successfully !')
+                alert('Login Successfully !')
                 e.target.reset();
                 navigate(location?.state ? location.state : '/')
             })
@@ -47,6 +50,8 @@ const Login = () => {
         signInWithGoogle()
             .then(result => {
                 console.log(result.user)
+                alert('Login Successfully !')
+                navigate('/')
             })
             .catch(error => {
                 console.error(error)
@@ -57,6 +62,8 @@ const Login = () => {
         githubLogin()
             .then(result => {
                 console.log(result.user)
+                alert('Login Successfully !',)
+                navigate('/')
             })
             .catch(error => {
                 console.error(error)
@@ -140,9 +147,8 @@ const Login = () => {
                     {
                         success && <p className="text-green-600 mx-auto mb-2">{success}</p>
                     }
-                    <hr></hr>
-                    <p className="text-sm font-bold text-center justify-center ">Continue with</p>
-                    <div className=" bg-slate-500 min-w-[255px] min-h-[45px] items-center pt-2 rounded-md mx-auto mb-4 space-y-2 justify-center text-center">
+                    <p className="divider text-sm font-bold text-center justify-center ">Continue with</p>
+                    <div className="  min-w-[255px] min-h-[45px] items-center pt-2 rounded-md mx-auto mb-4 space-y-2 justify-center text-center">
 
                         <div className="flex gap-4 justify-center">
                             <div>

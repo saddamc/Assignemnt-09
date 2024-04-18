@@ -7,6 +7,7 @@ import { NavLink } from 'react-router-dom';
 
 
 const HomesSlider = () => {
+
     return (
         <div className='mx-auto max-w-7xl'>
             <Swiper

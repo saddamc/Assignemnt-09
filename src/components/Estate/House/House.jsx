@@ -13,7 +13,7 @@ const House = ({ house }) => {
                     <p>{estate_title}</p>
                     <div className="card-actions justify-start">
                         <Link to={`/house/${id}`}>
-                            <button className="btn-sm px-2 rounded-md text-white bg-black hover:bg-red-500">View Details</button>
+                            <button className="btn-sm px-2 rounded-md bg-cyan-400 font-bold text-[16px] hover:bg-red-500">View Property</button>
                         </Link>
                     </div>
                 </div>

@@ -3,9 +3,13 @@ import { GrStatusGood } from "react-icons/gr";
 import { FiMapPin } from "react-icons/fi";
 import { FaRegMessage } from "react-icons/fa6";
 import { AiOutlineMail } from "react-icons/ai";
+import { useEffect } from "react";
 
 
 const DetailsHouse = () => {
+    useEffect(() => {
+        document.title = `RAINBOW | DETAILS`;
+    }, []);
     const houses = useLoaderData();
     const { id } = useParams()
     // const idInt = parseInt(id);

@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { ToastContainer, toast } from 'react-toastify';
@@ -8,6 +8,9 @@ import { updateProfile } from "firebase/auth";
 
 
 const Register = () => {
+    useEffect(() => {
+        document.title = `RAINBOW | REGISTER`;
+    }, []);
     const { createUser } = useContext(AuthContext);
 
     const [registerError, setRegisterError] = useState('');
