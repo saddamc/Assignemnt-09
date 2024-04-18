@@ -1,22 +1,23 @@
-import { useContext, useRef, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
-import { sendPasswordResetEmail } from "firebase/auth";
-import auth from "../../firebase/firebase.config";
+import { FaGithub } from "react-icons/fa6";
 
 
 const Login = () => {
-    const { signIn, signInWithGoogle } = useContext(AuthContext);
+    const { signIn, signInWithGoogle, githubLogin } = useContext(AuthContext);
 
     const [registerError, setRegisterError] = useState('');
     const [success, setSuccess] = useState('');
     const [showPassword, setShowPassword] = useState(false);
     // const emailRef = useRef(null);
     const navigate = useNavigate();
+    const location = useLocation();
+    console.log('location login', location)
 
     const handleLogin = e => {
         e.preventDefault();
@@ -44,6 +45,16 @@ const Login = () => {
     }
     const handleGoogleSignIn = () => {
         signInWithGoogle()
+            .then(result => {
+                console.log(result.user)
+            })
+            .catch(error => {
+                console.error(error)
+            })
+    }
+
+    const handleGithubSignIn = () => {
+        githubLogin()
             .then(result => {
                 console.log(result.user)
             })
@@ -129,20 +140,30 @@ const Login = () => {
                     {
                         success && <p className="text-green-600 mx-auto mb-2">{success}</p>
                     }
+                    <hr></hr>
+                    <p className="text-sm font-bold text-center justify-center ">Continue with</p>
+                    <div className=" bg-slate-500 min-w-[255px] min-h-[45px] items-center pt-2 rounded-md mx-auto mb-4 space-y-2 justify-center text-center">
 
-
-
-
-                </div>
-                <div className="bg-slate-500 min-w-[255px] min-h-[65px] rounded-md mx-auto mb-4 space-y-2 justify-center text-center">
-                    <p className="text-sm font-bold items-center text-white">Login with</p>
-                    <div>
-                        <button onClick={handleGoogleSignIn} className="bg-yellow-700 px-2 py-1 font-semibold text-white rounded-md flex items-center">
-                            <FcGoogle></FcGoogle>
-                            <span className="ml-1">Google</span></button>
+                        <div className="flex gap-4 justify-center">
+                            <div>
+                                <button onClick={handleGoogleSignIn} className="bg-yellow-700 px-2 py-1 font-semibold text-white rounded-md flex items-center">
+                                    <FcGoogle></FcGoogle>
+                                    <span className="ml-1">Google</span></button>
+                            </div>
+                            <div>
+                                <button onClick={handleGithubSignIn} className="bg-slate-600 px-2 py-1 font-semibold text-white rounded-md flex items-center">
+                                    <FaGithub></FaGithub>
+                                    <span className="ml-1">GitHub</span></button>
+                            </div>
+                        </div>
                     </div>
+                    <Link className="mx-auto font-bold shadow-md shadow-black text-white bg-black px-8 py-1 rounded-md mb-4" to="/register"><p>Create New Account</p></Link>
+
+
+
+
                 </div>
-                <Link className="mx-auto font-bold shadow-md shadow-black text-white bg-black px-8 py-1 rounded-md" to="/register"><p>Create New Account</p></Link>
+
 
             </div>
             <ToastContainer />

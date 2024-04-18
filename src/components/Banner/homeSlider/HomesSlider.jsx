@@ -2,8 +2,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css/navigation';
-import { HiOutlineArrowLeft, HiOutlineArrowRight } from 'react-icons/hi';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -75,18 +74,6 @@ const HomesSlider = () => {
                         </NavLink>
                     </div>
                 </SwiperSlide>
-
-
-
-                {/* <div className="top-[50%] absolute z-10 button-next-slide group-hover:left-0 -left-[23rem] duration-500 text-white w-[40px] bg-[black] p-2 grid place-items-center ">
-                    <HiOutlineArrowLeft></HiOutlineArrowLeft>
-
-                </div>
-                <div className="top-[50%] absolute z-10 button-prev-slide group-hover:right-0 -right-[23rem] duration-500 text-white w-[40px] bg-[black] p-2 grid place-items-center ">
-                    {""}
-                    <HiOutlineArrowRight></HiOutlineArrowRight>
-                </div> */}
-
             </Swiper>
         </div >
     );

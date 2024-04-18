@@ -14,6 +14,8 @@ const Register = () => {
     const [success, setSuccess] = useState('');
     const [showPassword, setShowPassword] = useState(false);
 
+
+
     const handleRegister = e => {
         e.preventDefault();
         console.log(e.currentTarget);
